@@ -1,0 +1,373 @@
+<html>
+  <head>
+    <title>SWAY - html/css for extension design enhancements</title>
+
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 1.5;
+      }
+
+      .top-banner {
+        border-top:3px solid #d60025;
+      }
+      .top-banner-main {
+        width:100%;
+        height:25px;
+        background-color: #f60035;box-shadow: inset 0px -3px 0px 0px white;
+        overflow: visible;
+      }
+      .top-banner-logo {
+        height: 18px;
+        position: relative;
+        top: 2px;
+        left: 4px;
+        
+      }
+      .top-banner-wordmark {
+        position: relative;
+        top:-4px;
+        left:120px;
+      }
+      .top-banner-logo-container {
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        top:-30px;
+        left:676px;
+        background-color: white;
+      }
+      .top-banner-swaysays {
+        position: relative;
+        top: -6px;
+        left: 136px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1;
+        color: white;
+      }
+      .top-banner-swaymenu {
+        position: relative;
+        top: -7px;
+        left: 330px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1;
+      }
+
+
+      .side-banner {
+        position: relative;
+        top: 110px;
+        left: 116px;
+      }
+      .score {
+        
+        width: 50px;
+        height: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1;
+        color: #f60035;
+        position: relative;
+        left: -17px;
+      }
+      .bias-o-meter {
+        margin-top: 4px;
+        background-color: white;
+        width: 12px;
+        height: 40px;
+        border: 1px solid #d6d6d6;
+        border-radius: 7px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 600;
+        font-size: 9px;
+        line-height: 1;
+        color: white;
+        text-align: center;
+      }
+      .bias-far-left {
+        background-color: #a11b1a;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 1px;
+        }
+      .bias-centre-left {
+        background-color: #f67446;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 1px;
+        }
+      .bias-centre {
+        background-color: #40d9d9;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 1px;
+        }
+      .bias-centre-right {
+        background-color: #408ff7;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 1px;
+        }
+      .bias-far-right {
+        background-color: #3853da;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 1px;
+        margin-top: 1px;
+
+      }
+      .side-banner-logo {
+        position: relative;
+        top:5px;
+      }
+      .side-banner-logo img {
+        height: 20px;
+      }
+      .side-banner-swaymenu {
+        position: relative;
+        top: 6px;
+        
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1;
+      }
+      .sway-topbanner-popup {
+        padding: 1em 0 2em 0;
+        border-radius: 4px;
+        background-color: white;
+        border: solid #f60035 2px;
+        width:  624px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 14px;
+        position: relative;
+        top: -866px;
+        left:  100px;
+        box-shadow: 0px 3px 16px 1px rgba(0,0,0,0.4);
+      }
+      .popup-leftside {
+        width: 260px;
+        position: relative;
+        left:  40px;
+        top: 10px;
+        float: left; 
+      }
+      .popup-leftside ol {
+        padding-left: 0;
+      }
+      .popup-rightside {
+        margin-left: 8px;
+        border-left: solid #f60035 2px;
+        padding-left: 12px;
+        width: 290px;
+        position: relative;
+        left:  40px;
+        top: 10px;
+        font-weight: 600;
+        float: left;
+      }
+      .popup-bias-o-meter {
+        background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,108,255,1) 100%);
+        width: 100%;
+        height: 18px;
+        border-radius: 9px;
+      }
+      .popup-bias-o-meter-marker {
+        background-color: white;
+        width: 7px;
+        height: 14px;
+        border-radius: 3px;
+        position: relative;
+        top: 2px;
+        left: 200px;
+      }
+      .popup-share {
+        background-color: #f60035;
+        width: 100%;
+        padding: 10px 0;
+        color: white;
+        font-size: 13px;
+        
+        text-align: center;
+        border-radius: 24px;
+      }
+      .pop-corner {
+        width: 45px;
+        position: relative;
+        top: -46px;
+        left: -10px;
+      }
+      #mainly-far-left {
+        margin-top: 1px;
+      }
+      #mainly-centre {
+        margin-top: 12px;
+      }
+      #mainly-centre-right {
+        margin-top: 18px;
+      }
+      #tweet1 {
+        background-color: rgba(255, 144, 66, 0);
+        width: 680px;
+        height: 534px;
+      }
+      #tweet2 {
+        background-color: rgba(144, 255, 66, 0);
+        width: 680px;
+        height: 179px;
+      }
+      #tweet2 .side-banner {
+        top: 66px;
+      }
+      #tweet3 {
+        background-color: rgba(66, 144, 255, 0);
+        width: 680px;
+        height: 200px;
+      }
+      #tweet3 .side-banner {
+        top: 66px;
+      }
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Sway design elements for inline-content</h1>
+
+    <h3>Adding a Sway banner to the top of a single tweet page</h2>
+
+    <p>Mid size (eg. tablet) where the twitter UI becomes an icon column</p>
+
+    <div style="width:800px;border:1px solid black">
+      <div class="top-banner">
+        <div class="top-banner-main">
+
+          <img src="sway-wordmark-01.png" width="50px" class="top-banner-wordmark">
+          
+          <span class="top-banner-swaysays">80% reliable | Leans right | Safe to share </span>
+
+          <div class="top-banner-logo-container">
+            <img src="sway-banner-logo.png" class="top-banner-logo">
+          </div>
+        </div>
+      </div>
+      <img src="tweet-midsize.png" style="width:100%">
+
+      <div class="sway-topbanner-popup">
+        <img src="pop-corner.png" class="pop-corner">
+        <div class="popup-leftside">
+          <p>How we scored this tweet:</p>
+
+          <ol>
+            <li>Organisation political bias</li>
+            <li>Author’s accuracy historically</li>
+            <li>How popular is this view</li>
+            <li>Factual accuracy vs opinion</li>
+          </ol>
+
+          <p>We recommend a balanced view, try reading these alternative stories:</p>
+        </div>
+        <div class="popup-rightside">
+          <div class="popup-bias-o-meter">
+            <div class="popup-bias-o-meter-marker">&nbsp;</div>
+          </div>
+          <p>68% factually accurate</p>
+          <p>Liked by 78% of followers and shared 67 times</p>
+          <p>78% accurate, 60% opinion</p>
+
+          <div class="popup-share">This tweet is 80% reliable - Safe to share</div>
+        </div>
+        <br clear="all">
+      </div>
+    </div>
+
+    <p>Mid size (eg. tablet) Timeline view - multiple tweets </p>
+
+    <div style="width:690px;height: 916px;border:1px solid black;background-image: url(twitter-timeline-midsize.png);background-size: 100%;background-repeat: no-repeat;">
+      
+
+      <div id="tweet1">
+        <div class="side-banner">
+          <div class="score">80%</div>
+          <div class="bias-o-meter">
+            <div class="bias-centre-right" id="mainly-centre-right"></div>
+            <div class="bias-far-right">&nbsp;</div>
+          </div>
+
+          <div class="side-banner-logo">
+            <img src="sway-banner-logo.png">
+          </div>
+
+          <div class="side-banner-swaymenu">
+            <span>☰</span>
+          </div>
+
+        </div>
+      </div><!-- end tweet one overlay> -->
+
+      <div id="tweet2">
+        <div class="side-banner">
+          <div class="score">40%</div>
+          <div class="bias-o-meter">
+            <div class="bias-centre" id="mainly-centre">&nbsp;</div>
+            <div class="bias-centre-right">&nbsp;</div>
+            
+          </div>
+
+          <div class="side-banner-logo">
+            <img src="sway-banner-logo.png">
+          </div>
+
+          <div class="side-banner-swaymenu">
+            <span>☰</span>
+          </div>
+
+        </div>
+      </div><!-- end tweet two overlay>-->
+
+      <div id="tweet3">
+        <div class="side-banner">
+          <div class="score">60%</div>
+          <div class="bias-o-meter">
+            <div class="bias-far-left" id="mainly-far-left">&nbsp;</div>
+            <div class="bias-centre-left">&nbsp;</div>
+          </div>
+
+          <div class="side-banner-logo">
+            <img src="sway-banner-logo.png">
+          </div>
+
+          <div class="side-banner-swaymenu">
+            <span>☰</span>
+          </div>
+
+        </div>
+      </div><!-- end tweet three overlay>-->
+
+
+
+    </div>
+
+
+
+
+  </body>
+</html>
