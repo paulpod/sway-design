@@ -151,8 +151,8 @@
         background-image: url(popup-background-logo.png);
         background-size: 20px;
         background-repeat: no-repeat;
-        background-position: 10px 14px;
-        padding: 1em 0 2em 0;
+        background-position: 10px 16px;
+        padding: 5px 0 0.66em 0;
         border-radius: 4px;
         background-color: white;
         border: solid #f60035 2px;
@@ -160,6 +160,12 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-size: 14px;
         box-shadow: 0px 3px 16px 1px rgba(0,0,0,0.4);
+      }
+      .sway-popup h3 {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 4px;
       }
       .sway-topbanner-popup {
         position: relative;
@@ -174,31 +180,35 @@
         box-shadow: 0px 3px 16px 1px rgba(0,0,0,0.4);
       }
       .popup-leftside {
+        //background-color: pink;
         width: 260px;
         position: relative;
         left:  40px;
-        top: -10px;
+        //top: -10px;
         float: left; 
       }
       .popup-leftside ol {
         padding-left: 0;
       }
       .popup-rightside {
+        //background-color: yellow;
         margin-left: 8px;
-        border-left: solid #f60035 2px;
-        padding-left: 12px;
+       
+        //padding-left: 12px;
         width: 290px;
         position: relative;
         left:  40px;
-        top: 10px;
+        //top: -10px;
         font-weight: 600;
         float: left;
       }
       .popup-bias-o-meter {
         background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,108,255,1) 100%);
-        width: 100%;
+        width: 230px;
         height: 18px;
         border-radius: 9px;
+        position: relative;
+        top: 2px;
       }
       .popup-bias-o-meter-marker {
         background-color: white;
@@ -216,7 +226,7 @@
         color: white;
         font-size: 13px;
         position: relative;
-        top: 20px;
+        top: 6px;
         
         text-align: center;
         border-radius: 24px;
@@ -224,8 +234,8 @@
       .pop-corner {
         width: 42px;
         position: relative;
-        top: -44px;
-        left: -10px;
+        top: -34px;
+        left: -4px;
       }
       .pop-corner-side {
         width: 42px;
@@ -238,6 +248,23 @@
         margin-bottom: -20px;
         position: relative;
         left: -20px;
+      }
+      .hozrule {
+        border-radius: 2px;
+        margin-top: 4px;
+        margin-bottom: 6px;
+        height: 2px;
+        width: 556px;
+        position: relative;
+        top: 10px;
+        left: 40px;
+        background-color: #ddd;
+      }
+      .alternatives-lozenge {
+        height: 48px;
+        border-radius: 24px;
+        background-color: #e0e0e0;
+        margin: 10px 20px 10px 20px;
       }
       #mainly-far-left {
         margin-top: 1px;
@@ -271,8 +298,33 @@
       }
       #recommended {
         position: relative;
-        left: -18px;
+        left: 22px;
+        top: -5px;
+        width: 280px;
+        line-height: 1.2;
+        float: left;
       }
+      .othersources {
+        width: 284px;
+        
+        float: left;
+        position: relative;
+        margin-top: 16px;
+        margin-left:  4px;
+
+      }
+      .othersources p {
+       
+
+      }
+      .othersources img {
+        margin-top: -11px;
+        margin-left: 24px;
+        width: 38px;
+
+      }
+
+      
 
 
 
@@ -307,30 +359,60 @@
 
       <div class="sway-popup sway-topbanner-popup" id="popshow1" style="display: none;">
         <img src="pop-corner.png" class="pop-corner">
+
         <div class="popup-leftside">
           <p>How we scored this tweet:</p>
-
-          <ol>
-            <li>Organisation political bias</li>
-            <li>Author’s accuracy historically</li>
-            <li>How popular is this view</li>
-            <li>Factual accuracy vs opinion</li>
-          </ol>
-
-          <p id="recommended">We recommend a balanced view, try reading these alternative stories:</p>
-          <img src="other-sources-placeholder.png" class="othersources">
         </div>
+
         <div class="popup-rightside">
+          <div class="popup-share">This tweet is 80% reliable - Safe to share</div>
+        </div>
+
+        <br clear="all">
+        <div class="hozrule"></div>
+
+        <div class="popup-leftside">
+          <h3>Organisation political bias</h3>
           <div class="popup-bias-o-meter">
             <div class="popup-bias-o-meter-marker">&nbsp;</div>
           </div>
-          <p>80% factually accurate</p>
-          <p>Liked by 78% of followers and shared 67 times</p>
-          <p>78% accurate, 60% opinion</p>
-
-          <div class="popup-share">This tweet is 80% reliable - Safe to share</div>
         </div>
+
+        <div class="popup-rightside">
+          <h3>How popular is this view</h3>
+          <div class="scored">Liked by 78% of followers, shared 67 times</div>
+        </div>
+
         <br clear="all">
+        <div class="hozrule"></div>
+
+        <div class="popup-leftside">
+          <h3>Author&apos;s accuracy historically</h3>
+            <div class="scored">80% factually accurate</div>
+        </div>
+
+        <div class="popup-rightside">
+          <h3>Factual accuracy vs opinion</h3>
+          <div class="scored">78% accurate, 60% opinion</div>
+        </div>
+
+        <br clear="all">
+
+        <div class="alternatives-lozenge">
+          <div id="recommended">
+            <p>We recommend a balanced view, try reading these alternative stories:</p>
+          </div>
+          <div class="othersources">
+            <img src="news-01.png">
+            <img src="news-02.png">
+            <img src="news-03.png">
+            <img src="news-04.png">
+            
+          </div>
+           
+        </div>
+       
+        
       </div>
     </div>
 
