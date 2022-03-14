@@ -180,22 +180,17 @@
         box-shadow: 0px 3px 16px 1px rgba(0,0,0,0.4);
       }
       .popup-leftside {
-        //background-color: pink;
-        width: 260px;
+        width: 250px;
         position: relative;
         left:  40px;
-        //top: -10px;
         float: left; 
       }
       .popup-leftside ol {
         padding-left: 0;
       }
-      .popup-rightside {
-        //background-color: yellow;
+      .popup-rightside {    
         margin-left: 8px;
-       
-        //padding-left: 12px;
-        width: 290px;
+        width: 300px;
         position: relative;
         left:  40px;
         //top: -10px;
@@ -243,12 +238,7 @@
         top: -44px;
         left: -553px;
       }
-      .othersources {
-        width:220px;
-        margin-bottom: -20px;
-        position: relative;
-        left: -20px;
-      }
+     
       .hozrule {
         border-radius: 2px;
         margin-top: 4px;
@@ -265,6 +255,7 @@
         border-radius: 24px;
         background-color: #e0e0e0;
         margin: 10px 20px 10px 20px;
+
       }
       #mainly-far-left {
         margin-top: 1px;
@@ -296,32 +287,34 @@
       #tweet3 .side-banner {
         top: 66px;
       }
-      #recommended {
+      .recommended {
         position: relative;
-        left: 22px;
-        top: -5px;
-        width: 280px;
+        left: 20px;
+        width: 240px;
         line-height: 1.2;
         float: left;
       }
-      .othersources {
-        width: 284px;
-        
-        float: left;
+      .recommended span {
         position: relative;
-        margin-top: 16px;
-        margin-left:  4px;
-
+        top: 9px;
+        font-size: 0.94em;
       }
-      .othersources p {
-       
-
+      .othersources {
+        float: right;
+        position: relative;
+        right:  6px;
+        top: 5px;
       }
+      
       .othersources img {
-        margin-top: -11px;
-        margin-left: 24px;
         width: 38px;
-
+        margin-left: 24px;
+        border-radius: 50%;
+      }
+      .popup-leftside span {
+        position: relative;
+        top: 17px;
+        font-size: 0.94em;
       }
 
       
@@ -361,7 +354,8 @@
         <img src="pop-corner.png" class="pop-corner">
 
         <div class="popup-leftside">
-          <p>How we scored this tweet:</p>
+          <span>Sway has analysed this tweet...</span>
+          
         </div>
 
         <div class="popup-rightside">
@@ -369,17 +363,17 @@
         </div>
 
         <br clear="all">
-        <div class="hozrule"></div>
+        <!--<div class="hozrule"></div>-->
 
         <div class="popup-leftside">
-          <h3>Organisation political bias</h3>
+          <h3>Organisation political bias:</h3>
           <div class="popup-bias-o-meter">
             <div class="popup-bias-o-meter-marker">&nbsp;</div>
           </div>
         </div>
 
         <div class="popup-rightside">
-          <h3>How popular is this view</h3>
+          <h3>How popular is this view?</h3>
           <div class="scored">Liked by 78% of followers, shared 67 times</div>
         </div>
 
@@ -387,26 +381,27 @@
         <div class="hozrule"></div>
 
         <div class="popup-leftside">
-          <h3>Author&apos;s accuracy historically</h3>
+          <h3>Author&apos;s accuracy:</h3>
             <div class="scored">80% factually accurate</div>
         </div>
 
         <div class="popup-rightside">
-          <h3>Factual accuracy vs opinion</h3>
+          <h3>Factual accuracy vs opinion:</h3>
           <div class="scored">78% accurate, 60% opinion</div>
         </div>
 
         <br clear="all">
 
         <div class="alternatives-lozenge">
-          <div id="recommended">
-            <p>We recommend a balanced view, try reading these alternative stories:</p>
+          <div class="recommended">
+            <span>We recommend a balanced view, try reading these alternative stories:</span>
           </div>
           <div class="othersources">
             <img src="news-01.png">
             <img src="news-02.png">
             <img src="news-03.png">
             <img src="news-04.png">
+            <img src="news-05.png">
             
           </div>
            
